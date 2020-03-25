@@ -1,0 +1,25 @@
+version: "3.7"
+
+# Service Definitions
+services:
+
+  app:
+    build:
+      context: .
+      dockerfile: ./build/myapp/Dockerfile
+    environment:
+      NODE_ENV: "production"  # set as default in image
+      CACHE_VIEWS: "true"     # set as default in image
+      APP_NAME: "AdonisJs"    # set as default in image
+
+#     APP_KEY: "You-need-to-generate-this (npx adonis key:generate --echo)" 
+      APP_KEY_FILE: /run/secrets/adonis.appkey
+    secrets:
+      - adonis.appkey
+    ports:
+      - "8080:8080"
+
+secrets:
+  adonis.appkey:
+    external: true
+    name: adonis.appkey.v1
