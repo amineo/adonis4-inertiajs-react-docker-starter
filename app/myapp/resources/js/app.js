@@ -11,3 +11,8 @@ render(
   />,
   app
 )
+
+// This is required to enable HMR
+if (module.hot) {
+  module.hot.accept();
+}
