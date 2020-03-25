@@ -7,11 +7,11 @@ import { jsx } from "@emotion/core";
 import Layout from '@/Shared/Layout'
 
 
-export default function Index(props) {
+export default function About(props) {
   return (
     <Layout>
       <h1 className="text-5xl">{props.welcome}</h1>
-      {SuccessMsg()}
+
       <p className="font-sans">It works!</p>
     </Layout>
   )

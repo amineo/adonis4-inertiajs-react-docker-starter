@@ -9,7 +9,7 @@ class IndexController {
 
   about({ inertia }) {
     let welcome = "About!"
-   return inertia.render('Index', { welcome }, { edgeVar: 'server-variable' })
+   return inertia.render('About', { welcome }, { edgeVar: 'server-variable' })
   }
 
 
