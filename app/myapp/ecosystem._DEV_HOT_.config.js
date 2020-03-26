@@ -6,7 +6,7 @@ module.exports = {
     instances: 1,
     autorestart: true,
     watch: true,
-    ignore_watch:['node_modules','public','resources/js']
+    ignore_watch:['node_modules','public','resources/js','resources/scss']
   },
   {
     name: process.env.APP_NAME + '_react_hot',
